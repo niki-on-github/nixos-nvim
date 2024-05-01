@@ -5,7 +5,6 @@
     ./options.nix
 
     ./plugins/lsp.nix
-    ./plugins/lualine.nix
     ./plugins/telescope.nix
     ./plugins/cmp.nix
     ./plugins/luasnip.nix
@@ -13,7 +12,10 @@
     ./plugins/indent.nix
     ./plugins/bufferline.nix
     ./plugins/treesitter.nix
-    # ./plugins/wilder.nix
     ./plugins/noice.nix
+    ./plugins/harpoon.nix
+    ./plugins/comment.nix
+    ./plugins/which-key.nix
+    ./plugins/undotree.nix
   ];
 }

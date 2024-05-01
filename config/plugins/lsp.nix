@@ -2,18 +2,19 @@
   plugins = {
     lsp = {
       enable = true;
-
       servers = {
-      clangd.enable = true;
+        ansiblels.enable = true;
+        clangd.enable = true;
+        jsonls.enable = true;
+        cmake.enable = true;
+        helm-ls.enable = true;
         tsserver.enable = true;
         nixd.enable = true;
         bashls.enable = true;
-
-        lua-ls = {
-          enable = true;
-          settings.telemetry.enable = false;
-        };
-
+        terraformls.enable = true;
+        pyright.enable = true;
+        yamlls.enable = true;
+        lua-ls.enable = true;
         rust-analyzer = {
           enable = true;
           installRustc = true;

@@ -69,5 +69,8 @@
 
     # use system clipboard
     clipboard = "unnamedplus";
+
+    # disable status line
+    laststatus = 0;
   };
 }

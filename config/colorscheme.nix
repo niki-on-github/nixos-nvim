@@ -1,21 +1,18 @@
-{self, pkgs, ...}: {
-  extraPlugins = 
-  let
-    toLua = str: "lua << EOF\n${str}\nEOF\n";
-  in
-  with pkgs.vimPlugins; [
-    {
-      plugin = monokai-pro-nvim;
-      config = toLua ''
-        require("monokai-pro").setup({
-          filter = "spectrum"
-        })
-        vim.cmd.colorscheme("monokai-pro")
-        vim.cmd("highlight Normal guibg=#1C1C1C ctermbg=234")
-        vim.cmd("highlight CursorLine guibg=NONE ctermbg=NONE")
-        vim.cmd("highlight LineNr guibg=NONE ctermbg=NONE")
-        vim.cmd("highlight CursorLineNr guibg=NONE guifg=#e0e0e0 ctermbg=NONE")
-      '';
-    }
-  ];
+{pkgs, ...}: {
+    colorschemes.onedark = {
+        enable = true; 
+        settings = {
+            colors = {
+                bg0 = "#1C1C1C";
+                bg1 = "#292929";
+                bg2 = "#3A3A3A";
+                bg3 = "#4E4E4E";
+                grey = "#808080";
+            };
+        };
+    };
+    extraConfigLuaPost = ''
+        vim.cmd("highlight CursorLine guibg=NONE ctermbg=NONE");
+        vim.cmd("highlight BufferLineFill guibg=NONE ctermbg=NONE");
+    '';
 }
