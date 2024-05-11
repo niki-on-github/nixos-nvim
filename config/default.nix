@@ -15,7 +15,7 @@
     ./plugins/noice.nix
     ./plugins/harpoon.nix
     ./plugins/comment.nix
-    ./plugins/which-key.nix
     ./plugins/undotree.nix
+    ./plugins/sleuth.nix
   ];
 }

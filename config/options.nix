@@ -18,7 +18,7 @@
     breakindent = true;
 
     # Enable incremental searching
-    hlsearch = true;
+    hlsearch = true; # use :noh to unhighlight
     incsearch = true;
 
     # Enable text wrap
@@ -37,11 +37,14 @@
     grepprg = "rg --vimgrep";
     grepformat = "%f:%l:%c:%m";
 
-    # Decrease updatetime
-    updatetime = 50; # faster completion (4000ms default)
+    # Faster completion (4000ms default)
+    updatetime = 100; 
 
     # Set completeopt to have a better completion experience
-    completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
+    # - When there is only one match, show it in the completion menu (menuone).
+    # - Do not automatically select the first entry in the completion menu (noselect).
+    # - Do not insert any text until the user explicitly selects a completion (noinsert).
+    completeopt = ["menuone" "noselect" "noinsert"];
 
     # Enable persistent undo history
     swapfile = false;
@@ -56,9 +59,6 @@
 
     # Always keep 8 lines above/below cursor unless at start/end of file
     scrolloff = 8;
-
-    # Reduce which-key timeout to 10ms
-    timeoutlen = 10;
 
     # Set encoding type
     encoding = "utf-8";

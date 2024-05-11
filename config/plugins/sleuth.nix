@@ -1,5 +1,5 @@
 {
-    plugins.which-key = {
+    plugins.sleuth = {
         enable = true;
     };
 }
