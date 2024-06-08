@@ -17,5 +17,6 @@
     ./plugins/comment.nix
     ./plugins/undotree.nix
     ./plugins/sleuth.nix
+    ./plugins/neogit.nix
   ];
 }
